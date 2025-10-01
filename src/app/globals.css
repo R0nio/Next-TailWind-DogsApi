@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "./fonts/Inter-VariableFont_opsz\,wght.ttf";
+/* @import "./fonts/Inter-VariableFont_opsz\,wght.ttf"; */
 
 :root {
   --background: #ffffff;
