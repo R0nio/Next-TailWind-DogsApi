@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {Button} from '../../shared/ui'
 
 export default function Home() {
@@ -7,7 +6,7 @@ export default function Home() {
       <main>
         <Button children='Кнопка'></Button>
       </main>
-
+      
       <footer>
 
       </footer>
