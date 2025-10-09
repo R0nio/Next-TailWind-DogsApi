@@ -15,7 +15,7 @@ export const Button = ({ children }) => {
 };
 
 
-export const Title = ({children}) =>{
+export const Title = ({ children }) =>{
     return <h1 className="font-[Inter] text-[#4d86ff] font-black text-4xl">{children}</h1>
 }
 
