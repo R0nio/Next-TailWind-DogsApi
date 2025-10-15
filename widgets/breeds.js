@@ -1,0 +1,28 @@
+import { Title } from "../shared/ui";
+import { DogCard } from "../shared/card";
+
+const breedslist =[
+    {src: "akita"},
+    {src: "beagle"},
+    {src: "havanese"},
+    {src: "brabancon"},
+    {src: "husky"},
+    {src: "mix"},
+    {src: "pembroke"},
+    {src: "samoyed"},
+    {src: "sharpei"},
+    {src: "saluki"},
+];
+
+export const Breeds = () =>{
+    return(
+        <div>
+            <Title children='Породы'/>
+            <div className="flex flex-wrap items-center gap-2.5 w-[1360px]">
+                {breedslist.map((item, i)=>{
+                    return <DogCard breed={item.src} key={i} />
+                })}
+            </div>
+        </div>
+    )
+}

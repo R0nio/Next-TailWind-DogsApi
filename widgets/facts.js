@@ -1,5 +1,8 @@
-import Title from '../shared/ui'
-import Button from '../shared/ui'
+'use client'
+import {Title} from '../shared/ui';
+import {Button} from '../shared/ui';
+import { useState } from 'react';
+
 
 const fact =[
     {text:"Собаки умеют пользоваться общественным транспортом, прямо как студенты."},
@@ -12,19 +15,30 @@ const fact =[
     {text:"Собаки тоже могут храпеть."},
     {text:"Собаки круто"},
     {text:"Интеллект взрослой собаки примерно равен уровню развития студента 4 курса."},
-]
+];
+
+const positive = {title:'Здорово!'};
+const negative = {title: 'Не здорово!'};
 
 export const Facts = () =>{
-    return(
-        <div>
-            <Title children='Интересные факты про собак' />
-            <ol>
-                {fact.map((item, i)=>{
-                    return(
-                        <li key={i}>{item.text}</li>
-                    )
-                })}
-            </ol>
-        </div>
-    )
+    const [onbutton, setbutton] = useState(positive);
+
+    return (
+      <div className="my-18">
+        <Title children="Интересные факты про собак" />
+        <ol className="my-14">
+          {fact.map((item, i) => {
+            return (
+              <li
+                key={i}
+                className="font-[Montserrat] font-semibold text-x1 text-[#222733]"
+              >
+                {i + 1}. {item.text}
+              </li>
+            );
+          })}
+        </ol>
+        <Button children={onbutton.title} func={()=> setbutton(onbutton === positive ? negative:positive)} />
+      </div>
+    );
 }

@@ -2,10 +2,10 @@
 
 
 
-export const Button = ({ children }) => {
+export const Button = ({ children, func}) => {
   return (
-    <div className="bg-[#4d86ff] px-[20px] py-1 w-fit rounded-full transition duration-300 ease-in-out cursor-pointer hover:bg-[#7ea2f1]">
-      <a href="#">
+    <div className="bg-[#4d86ff] px-[20px] py-1 w-fit rounded-full transition duration-300 ease-in-out cursor-pointer hover:bg-[#7ea2f1]" onClick={func}>
+      <a>
         <button>
           <p className="text-white text-sm font-[Montserrat] font-semibold">{children}</p>
         </button>
