@@ -7,6 +7,7 @@ import { useState, useEffect } from 'react';
 export const DogCard = ({breed}) =>{
     const [imageSrc, setImageSrc] = useState(picture);
     const [loading, setLoading] = useState(true);
+    const [breedImg, setBreedImg] = useState(1);
 
     useEffect(()=>{
         const fetchImage = async () =>{
@@ -25,13 +26,14 @@ export const DogCard = ({breed}) =>{
     }, []);
 
   return(
-    <div >
-      <Image src={imageSrc} alt='alt' className='rounded-[50px] w-[263px] h-[189px]' width={263} height={189} />
+    <div>
+      
+        {breedImg === 1 ? <Image src={imageSrc} alt='alt' className='rounded-[50px] w-[263px] h-[189px]' width={263} height={189} /> :  <p>{breed}</p>}
       {loading && (
                 <div className="absolute inset-0 flex items-center justify-center
                  bg-white bg-opacity-50">
                     Loading...
-                </div>
+                </div>  
             )}
     </div>
   )

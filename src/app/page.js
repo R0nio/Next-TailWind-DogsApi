@@ -4,6 +4,7 @@ import { MainScreen } from '../../widgets/mainScreen'
 import { About } from '../../widgets/About'
 import {Facts} from '../../widgets/facts'
 import {Breeds} from '../../widgets/breeds'
+import {Random} from '../../widgets/random'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <About />
         <Facts />
         <Breeds />
+        <Random />
         </div>
       </main>
       <footer>

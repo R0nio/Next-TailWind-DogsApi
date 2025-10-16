@@ -18,7 +18,7 @@ export const Breeds = () =>{
     return(
         <div>
             <Title children='Породы'/>
-            <div className="flex flex-wrap items-center gap-2.5 w-[1360px]">
+            <div className="grid  grid-cols-5 grid-rows-2 gap-2.5">
                 {breedslist.map((item, i)=>{
                     return <DogCard breed={item.src} key={i} />
                 })}
